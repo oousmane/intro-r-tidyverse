@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Introduction à R et au Tidyverse - Programme de la formation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Programme de la formation</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./ressources/tidyverse2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+    <a href="https://github.com/oousmane/intro-r-tidyverse" title="GitHub" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+</div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Accueil</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./schedule.html" class="sidebar-item-text sidebar-link active">Programme</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./materials.html" class="sidebar-item-text sidebar-link">Ressources</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./trainers.html" class="sidebar-item-text sidebar-link">Formateur</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#résumé" id="toc-résumé" class="nav-link active" data-scroll-target="#résumé">Résumé</a></li>
+  <li><a href="#objectifs-pédagogiques" id="toc-objectifs-pédagogiques" class="nav-link" data-scroll-target="#objectifs-pédagogiques">Objectifs pédagogiques</a></li>
+  <li><a href="#public-cible" id="toc-public-cible" class="nav-link" data-scroll-target="#public-cible">Public cible</a></li>
+  <li><a href="#contenu-de-la-formation" id="toc-contenu-de-la-formation" class="nav-link" data-scroll-target="#contenu-de-la-formation">Contenu de la formation</a></li>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link" data-scroll-target="#prérequis">Prérequis</a></li>
+  <li><a href="#modalités" id="toc-modalités" class="nav-link" data-scroll-target="#modalités">Modalités</a>
+  <ul class="collapse">
+  <li><a href="#modalités-pédagogiques" id="toc-modalités-pédagogiques" class="nav-link" data-scroll-target="#modalités-pédagogiques">Modalités pédagogiques</a></li>
+  <li><a href="#modalités-dévaluation-finale" id="toc-modalités-dévaluation-finale" class="nav-link" data-scroll-target="#modalités-dévaluation-finale">Modalités d’évaluation finale</a></li>
+  <li><a href="#documentation-remise-aux-stagiaires" id="toc-documentation-remise-aux-stagiaires" class="nav-link" data-scroll-target="#documentation-remise-aux-stagiaires">Documentation remise aux stagiaires</a></li>
+  <li><a href="#outils-utilisés-lors-de-la-formation" id="toc-outils-utilisés-lors-de-la-formation" class="nav-link" data-scroll-target="#outils-utilisés-lors-de-la-formation">Outils utilisés lors de la formation</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Programme de la formation</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="résumé" class="level2">
+<h2 class="anchored" data-anchor-id="résumé">Résumé</h2>
+<p>R est un logiciel et un langage qui va vous permettre de réaliser des analyses des données, de produire des représentations graphiques magnifiques ou encore de générer des pages web. Cette formation offre les bases nécessaires pour bien commencer avec R et RStudio.</p>
+<p>Le ‘tidyverse’ est un outil simple et rapide à prendre en main pour réaliser vos traitements de données. Les packages du ‘tidyverse’ nommés ‘dplyr’ et ‘tidyr’ sont de ceux les plus utilisés car ils permettent de couvrir l’ensemble des besoins de traitements ; de la restructuration à l’agrégation en passant par les jointures.</p>
+</section>
+<section id="objectifs-pédagogiques" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs-pédagogiques">Objectifs pédagogiques</h2>
+<p>À l’issue de la formation, le participant sera en mesure de :</p>
+<ul>
+<li><p>connaître la logique de fonctionnement des logiciels R et RStudio</p></li>
+<li><p>connaître les bases du langage R</p></li>
+<li><p>organiser les codes dans RStudio</p></li>
+<li><p>importer des données</p></li>
+<li><p>Réaliser des traitements de données avec les outils de gestion des données ‘tidyr’ et ‘dplyr’</p></li>
+<li><p>Programmer avec le ‘tidyverse’<br>
+</p></li>
+</ul>
+</section>
+<section id="public-cible" class="level2">
+<h2 class="anchored" data-anchor-id="public-cible">Public cible</h2>
+<ul>
+<li><p>Personnes souhaitant apprendre le langage R</p></li>
+<li><p>Les personnes qui utilisent rarement R et qui souhaitent en comprendre les bases</p></li>
+</ul>
+</section>
+<section id="contenu-de-la-formation" class="level2">
+<h2 class="anchored" data-anchor-id="contenu-de-la-formation">Contenu de la formation</h2>
+<p>Introduction au langage R et à l’IDE RStudio</p>
+<ul>
+<li><p>Le système R et le système RStudio</p></li>
+<li><p>Système d’aide du logiciel R</p></li>
+<li><p>Mots clefs réservés</p></li>
+<li><p>Les structures de données de R</p></li>
+<li><p>Créations des objets R</p></li>
+</ul>
+<!-- -->
+<ul>
+<li><p>Les structures de contrôles</p>
+<ul>
+<li><p>Conditions avec ‘if’</p></li>
+<li><p>Boucles avec ‘for’</p></li>
+</ul></li>
+<li><p>Normes et conventions R avec RStudio</p>
+<ul>
+<li><p>Le concept de projet RStudio</p></li>
+<li><p>La gestion des chemins de fichiers</p></li>
+<li><p>Importation de fichiers de données (CSV, Excel, SAS)</p></li>
+<li><p>Vérifier l’Importation</p></li>
+</ul></li>
+<li><p>Les packages R</p>
+<ul>
+<li><p>Installation de nouveaux packages</p></li>
+<li><p>Utilisations et recommandations</p></li>
+<li><p>Les packages populaires</p></li>
+</ul></li>
+<li><p>Exploration de données avec R</p>
+<ul>
+<li><p>Les solutions&nbsp;<em>simples</em>&nbsp;d’exploration de données</p></li>
+<li><p>Les solutions graphiques pour l’exploration des données</p></li>
+</ul></li>
+<li><p>Découverte du package ‘dplyr’</p>
+<ul>
+<li><p>travailler avec des ‘data.frame’ en ‘base R’</p></li>
+<li><p>travailler avec des ‘data.frame’ avec ‘dplyr’</p></li>
+</ul></li>
+<li><p>Création de fonctions</p>
+<ul>
+<li><p>S’organiser avec les fonctions</p></li>
+<li><p>Les bases du développement de fonctions</p></li>
+</ul></li>
+<li><p>Format tidy</p></li>
+<li><p>Les outils du tidyverse</p>
+<ul>
+<li><p>Présentation des packages</p></li>
+<li><p>Enchaînements des opérations (piping)</p></li>
+</ul></li>
+<li><p>Recodages des variables</p></li>
+<li><p>Filtrages des données</p></li>
+<li><p>Sélections des colonnes</p></li>
+<li><p>Tris des tableaux</p></li>
+<li><p>Transformations et créations de colonnes</p>
+<ul>
+<li><p>Opérations usuelles</p></li>
+<li><p>Gestion des String et des dates</p></li>
+</ul></li>
+<li><p>Agrégations</p></li>
+<li><p>Représenter des données sous forme de graphiques avec ‘ggplot2’</p></li>
+<li><p>Créer des visualisations de données soignés et annotées</p></li>
+<li><p>Utiliser les extensions populaires</p></li>
+<li><p>Exporter les graphiques</p></li>
+<li><p>Paradigmes de ggplot2</p></li>
+<li><p>La galaxie des types de graphiques</p>
+<ul>
+<li><p>Les types usuels</p></li>
+<li><p>Les fonctions statistiques</p></li>
+</ul></li>
+<li><p>Maîtrise des axes et des légendes</p></li>
+<li><p>Ventilation des graphiques par axes</p></li>
+<li><p>Les thèmes et La personnalisation des graphiques</p></li>
+<li><p>Les outils à maîtriser</p>
+<ul>
+<li><p>Combinaisons de graphiques</p></li>
+<li><p>Optimisations du placement des textes</p></li>
+</ul></li>
+<li><p>Les extensions</p></li>
+</ul>
+</section>
+<section id="prérequis" class="level2">
+<h2 class="anchored" data-anchor-id="prérequis">Prérequis</h2>
+<p><em>Il n’est pas demandé de connaître R pour suivre cette formation.</em></p>
+<ul>
+<li><p>avoir déjà pratiqué un langage de programmation (SAS, Visual Basic, python, R, sh, etc.) ou avoir envie d’en pratiquer un</p></li>
+<li><p>avoir des notions d’analyse de données (moyenne, somme, comptage)</p></li>
+</ul>
+</section>
+<section id="modalités" class="level2">
+<h2 class="anchored" data-anchor-id="modalités">Modalités</h2>
+<section id="modalités-pédagogiques" class="level3">
+<h3 class="anchored" data-anchor-id="modalités-pédagogiques">Modalités pédagogiques</h3>
+<p>Notre formation s’articule sur une alternance d’apports théoriques et de pratiques :</p>
+<ul>
+<li><p>Exposés théoriques réalisés par le formateur</p></li>
+<li><p>Apport d’expériences de le formateur</p></li>
+<li><p>Echanges et retours d’expérience entre les participants.</p></li>
+<li><p>Exercices et ateliers d’application permettant aux stagiaires de pratiquer concrêtement.</p></li>
+</ul>
+</section>
+<section id="modalités-dévaluation-finale" class="level3">
+<h3 class="anchored" data-anchor-id="modalités-dévaluation-finale">Modalités d’évaluation finale</h3>
+<ul>
+<li><p>Évaluation sous forme d’autoevaluation</p></li>
+<li><p>Questionnaire d’évaluation</p></li>
+<li><p>Test de positionnement en début et fin de la formation pour valider les compétences acquises</p></li>
+</ul>
+</section>
+<section id="documentation-remise-aux-stagiaires" class="level3">
+<h3 class="anchored" data-anchor-id="documentation-remise-aux-stagiaires">Documentation remise aux stagiaires</h3>
+<ul>
+<li><p>Les supports de cours au format PDF</p></li>
+<li><p>Ces mêmes supports contiennent les codes R et les graphiques, et quelques exercices</p></li>
+</ul>
+</section>
+<section id="outils-utilisés-lors-de-la-formation" class="level3">
+<h3 class="anchored" data-anchor-id="outils-utilisés-lors-de-la-formation">Outils utilisés lors de la formation</h3>
+<ul>
+<li><p>R et Rstudio</p></li>
+<li><p>Navigateur moderne (Chrome, FireFox, Edge, Safari)</p></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">All contents are © Ousmane Ouedraogo and licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons</a></div>   
+    <div class="nav-footer-right"><a href="https://github.com/oousmane/quarto-blog"></a></div>
+  </div>
+</footer>
+
+
+
+</body></html>

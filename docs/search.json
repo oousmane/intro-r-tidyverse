@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction à R et au Tidyverse",
+    "section": "",
+    "text": "R est aujourd’hui le logiciel libre de référence pour traiter des données. La présente formation, qui s’étale sur deux jours, est consacrée à la présentation des fonctionnalités de base du logiciel R et du package tidyverse, le tout accompagnée d’exemples d’utilisations pratiques. Les stagiaires mettront en œuvre le logiciel, sous la forme d’exercices d’application.\n\n\n\nSource : tidyverse.org"
+  },
+  {
+    "objectID": "materials.html",
+    "href": "materials.html",
+    "title": "Ressources documentaires",
+    "section": "",
+    "text": "Afin de pouvoir reproduire les exemples de ce document ou de réaliser les exercices, il est nécessaire d’avoir à disposition les logiciels R et RStudio installés correctement sur votre ordinateur.Assurez vous d’avoir bien fermé toutes les sessions de RStudio ou de R avant de commencer les installations si elles sont nécessaires.Pour ce faire suivez scrupuleusement les étapes consignées dans le Guide d’installation de R & Rstudio"
+  },
+  {
+    "objectID": "materials.html#pour-aller-plus-loin",
+    "href": "materials.html#pour-aller-plus-loin",
+    "title": "Ressources documentaires",
+    "section": "Pour aller plus loin",
+    "text": "Pour aller plus loin\nDe nombreuses ressources pour apprendre R et le Tidyverse sont disponibles en libre d’accès sur internet. Voilà quelques ressources à consulter absolument pour approfondir vos connaissances sur le sujet.\n\n\n\nR for Data Science\nHands-On Programming with R\nR Graphics Cookbook\n\n\n\n\n\nPour vous motivez davantage tous ces livres ont été écrit et publié en ligne avec R et Quarto ou Rmarkdown."
+  },
+  {
+    "objectID": "trainers.html",
+    "href": "trainers.html",
+    "title": "Introduction à R et au Tidyverse",
+    "section": "",
+    "text": "Ousmane Ouedraogo, Météorologiste.\n\nSalut 👋 je suis météo 🌦️ et je travaille à l’ Agence Nationale de la Météorologie à Ouagadougou, Burkina Faso. Je suis particulièrement passionné d’analyse et visualisation de données, de climat et de machine learning. Aussi j’adore apprendre et partager de nouvelle choses au quotidien.\nPar mes temps libres j’anime des formations sur la programmation avec R d’une part et de l’autre j’offre des services de freelance en analyse et visualisation de données."
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Programme de la formation",
+    "section": "",
+    "text": "R est un logiciel et un langage qui va vous permettre de réaliser des analyses des données, de produire des représentations graphiques magnifiques ou encore de générer des pages web. Cette formation offre les bases nécessaires pour bien commencer avec R et RStudio.\nLe ‘tidyverse’ est un outil simple et rapide à prendre en main pour réaliser vos traitements de données. Les packages du ‘tidyverse’ nommés ‘dplyr’ et ‘tidyr’ sont de ceux les plus utilisés car ils permettent de couvrir l’ensemble des besoins de traitements ; de la restructuration à l’agrégation en passant par les jointures."
+  },
+  {
+    "objectID": "schedule.html#objectifs-pédagogiques",
+    "href": "schedule.html#objectifs-pédagogiques",
+    "title": "Programme de la formation",
+    "section": "Objectifs pédagogiques",
+    "text": "Objectifs pédagogiques\nÀ l’issue de la formation, le participant sera en mesure de :\n\nconnaître la logique de fonctionnement des logiciels R et RStudio\nconnaître les bases du langage R\norganiser les codes dans RStudio\nimporter des données\nRéaliser des traitements de données avec les outils de gestion des données ‘tidyr’ et ‘dplyr’\nProgrammer avec le ‘tidyverse’"
+  },
+  {
+    "objectID": "schedule.html#public-cible",
+    "href": "schedule.html#public-cible",
+    "title": "Programme de la formation",
+    "section": "Public cible",
+    "text": "Public cible\n\nPersonnes souhaitant apprendre le langage R\nLes personnes qui utilisent rarement R et qui souhaitent en comprendre les bases"
+  },
+  {
+    "objectID": "schedule.html#contenu-de-la-formation",
+    "href": "schedule.html#contenu-de-la-formation",
+    "title": "Programme de la formation",
+    "section": "Contenu de la formation",
+    "text": "Contenu de la formation\nIntroduction au langage R et à l’IDE RStudio\n\nLe système R et le système RStudio\nSystème d’aide du logiciel R\nMots clefs réservés\nLes structures de données de R\nCréations des objets R\n\n\n\nLes structures de contrôles\n\nConditions avec ‘if’\nBoucles avec ‘for’\n\nNormes et conventions R avec RStudio\n\nLe concept de projet RStudio\nLa gestion des chemins de fichiers\nImportation de fichiers de données (CSV, Excel, SAS)\nVérifier l’Importation\n\nLes packages R\n\nInstallation de nouveaux packages\nUtilisations et recommandations\nLes packages populaires\n\nExploration de données avec R\n\nLes solutions simples d’exploration de données\nLes solutions graphiques pour l’exploration des données\n\nDécouverte du package ‘dplyr’\n\ntravailler avec des ‘data.frame’ en ‘base R’\ntravailler avec des ‘data.frame’ avec ‘dplyr’\n\nCréation de fonctions\n\nS’organiser avec les fonctions\nLes bases du développement de fonctions\n\nFormat tidy\nLes outils du tidyverse\n\nPrésentation des packages\nEnchaînements des opérations (piping)\n\nRecodages des variables\nFiltrages des données\nSélections des colonnes\nTris des tableaux\nTransformations et créations de colonnes\n\nOpérations usuelles\nGestion des String et des dates\n\nAgrégations\nReprésenter des données sous forme de graphiques avec ‘ggplot2’\nCréer des visualisations de données soignés et annotées\nUtiliser les extensions populaires\nExporter les graphiques\nParadigmes de ggplot2\nLa galaxie des types de graphiques\n\nLes types usuels\nLes fonctions statistiques\n\nMaîtrise des axes et des légendes\nVentilation des graphiques par axes\nLes thèmes et La personnalisation des graphiques\nLes outils à maîtriser\n\nCombinaisons de graphiques\nOptimisations du placement des textes\n\nLes extensions"
+  },
+  {
+    "objectID": "schedule.html#prérequis",
+    "href": "schedule.html#prérequis",
+    "title": "Programme de la formation",
+    "section": "Prérequis",
+    "text": "Prérequis\nIl n’est pas demandé de connaître R pour suivre cette formation.\n\navoir déjà pratiqué un langage de programmation (SAS, Visual Basic, python, R, sh, etc.) ou avoir envie d’en pratiquer un\navoir des notions d’analyse de données (moyenne, somme, comptage)"
+  },
+  {
+    "objectID": "schedule.html#modalités",
+    "href": "schedule.html#modalités",
+    "title": "Programme de la formation",
+    "section": "Modalités",
+    "text": "Modalités\n\nModalités pédagogiques\nNotre formation s’articule sur une alternance d’apports théoriques et de pratiques :\n\nExposés théoriques réalisés par le formateur\nApport d’expériences de le formateur\nEchanges et retours d’expérience entre les participants.\nExercices et ateliers d’application permettant aux stagiaires de pratiquer concrêtement.\n\n\n\nModalités d’évaluation finale\n\nÉvaluation sous forme d’autoevaluation\nQuestionnaire d’évaluation\nTest de positionnement en début et fin de la formation pour valider les compétences acquises\n\n\n\nDocumentation remise aux stagiaires\n\nLes supports de cours au format PDF\nCes mêmes supports contiennent les codes R et les graphiques, et quelques exercices\n\n\n\nOutils utilisés lors de la formation\n\nR et Rstudio\nNavigateur moderne (Chrome, FireFox, Edge, Safari)"
+  }
+]
