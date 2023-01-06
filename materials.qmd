@@ -1,8 +1,28 @@
 ---
-title: "Course Materials"
+title: "Ressources documentaires"
 ---
 
-[Datasets](data/)
+## Avant la formation
 
-[Slides](slides/)
+Afin de pouvoir reproduire les exemples de ce document ou de réaliser les exercices, il est nécessaire d'avoir à disposition les logiciels R et RStudio installés correctement sur votre ordinateur.Assurez vous d'avoir bien fermé toutes les sessions de RStudio ou de R avant de commencer les installations si elles sont nécessaires.Pour ce faire suivez scrupuleusement les étapes consignées dans le [Guide d'installation de R & Rstudio](ressources/guide-installation-r.pdf)
 
+## Pour aller plus loin
+
+De nombreuses ressources pour apprendre R et le Tidyverse sont disponibles en libre d'accès sur internet.
+Voilà quelques ressources à consulter absolument pour approfondir vos connaissances sur le sujet.
+
+::: columns
+::: {.column width="50%"}
+-   [R for Data Science](https://r4ds.had.co.nz "R for Data Science")
+
+-   [Hands-On Programming with R](https://rstudio-education.github.io/hopr/ "Hands-On Programming with R")
+
+-   [R Graphics Cookbook](https://r-graphics.org "R Graphics Cookbook")
+:::
+
+::: {.column width="50%"}
+![](https://raw.githubusercontent.com/oousmane/intro-r/main/img/Presentation1/Slide2.png){width="1000"}
+:::
+:::
+
+Pour vous motivez davantage tous ces livres ont été écrit et publié en ligne avec R et Quarto ou Rmarkdown.

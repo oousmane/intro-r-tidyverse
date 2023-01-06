@@ -1,28 +1,36 @@
 project:
   type: website
   output-dir: docs
+lang: fr
 
 website:
-  title: "Course Title"
+  title: "Introduction à R et au Tidyverse"
   sidebar:
     background: primary
-    # logo: "images/logo.png"
+    logo: "ressources/tidyverse2.png"
     pinned: true
     align: center
     tools:
       - icon: github
-        href: https://github.com/Pakillo/quarto-course-website-template
+        href: https://github.com/oousmane/intro-r-tidyverse
         text: GitHub
     style: docked
     contents:
       - href: index.qmd
-        text: Home
+        text: Accueil
       - href: schedule.qmd
-        text: Schedule
+        text: Programme
       - href: materials.qmd
-        text: Materials
-      - href: https://github.com/Pakillo/quarto-course-website-template/discussions
-        text: Forum
+        text: Ressources
+      - href: trainers.qmd
+        text: Formateur
+  page-footer:
+    left: |
+     All content are © Ousmane Ouedraogo and licensed under
+     [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/)
+    right: |
+     [{{< fa brands github >}} ](https://github.com/oousmane/quarto-blog)
+
 
 format:
   html:

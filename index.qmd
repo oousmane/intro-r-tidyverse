@@ -1,5 +1,9 @@
 ---
-title: "Course Title"
+title: "Introduction à R et au Tidyverse"
 ---
 
-Course info & details here
+R est aujourd'hui le logiciel libre de référence pour traiter des données.
+La présente formation, qui s'étale sur deux jours, est consacrée à la présentation des fonctionnalités de base du logiciel R et du package `tidyverse`, le tout accompagnée d'exemples d'utilisations pratiques.
+Les stagiaires mettront en œuvre le logiciel, sous la forme d'exercices d'application.
+
+[![Source : tidyverse.org](https://cdn.analyticsvidhya.com/wp-content/uploads/2019/05/tidyverse-default.png)](www.tidyverse.org)

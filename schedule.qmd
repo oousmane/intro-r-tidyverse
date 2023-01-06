@@ -1,15 +1,187 @@
 ---
-title: "Schedule"
+title: "Programme de la formation"
 ---
+## Résumé
 
-Example schedule:
+R est un logiciel et un langage qui va vous permettre de réaliser des analyses des données, de produire des représentations graphiques magnifiques ou encore de générer des pages web.
+Cette formation offre les bases nécessaires pour bien commencer avec R et RStudio.
 
-|     |                Morning              |          Afternoon                     |
-|:---:|:-----------------------------------:|:--------------------------------------:|
-|  L  | Intro + Data manipulation           | git / GitHub                           |
-|  M  | Generalised Linear Models           | Data visualisation                     |
-|  X  | Mixed models / GAM / Bayes          | Functional programming + Students work |
-|  J  | Multivariate analyses               | Reproducible workflows                 |
-|  V  | Using R as GIS + Students work      | Project presentations                  |
+Le 'tidyverse' est un outil simple et rapide à prendre en main pour réaliser vos traitements de données.
+Les packages du 'tidyverse' nommés 'dplyr' et 'tidyr' sont de ceux les plus utilisés car ils permettent de couvrir l'ensemble des besoins de traitements ; de la restructuration à l'agrégation en passant par les jointures.
 
+## Objectifs pédagogiques
+
+À l'issue de la formation, le participant sera en mesure de :
+
+-   connaître la logique de fonctionnement des logiciels R et RStudio
+
+-   connaître les bases du langage R
+
+-   organiser les codes dans RStudio
+
+-   importer des données
+
+-   Réaliser des traitements de données avec les outils de gestion des données 'tidyr' et 'dplyr'
+
+-   Programmer avec le 'tidyverse'\
+
+## Public cible
+
+-   Personnes souhaitant apprendre le langage R
+
+-   Les personnes qui utilisent rarement R et qui souhaitent en comprendre les bases
+
+## Contenu de la formation
+
+Introduction au langage R et à l'IDE RStudio
+
+-   Le système R et le système RStudio
+
+-   Système d'aide du logiciel R
+
+-   Mots clefs réservés
+
+-   Les structures de données de R
+
+-   Créations des objets R
+
+<!-- -->
+
+-   Les structures de contrôles
+
+    -   Conditions avec 'if'
+
+    -   Boucles avec 'for'
+
+-   Normes et conventions R avec RStudio
+
+    -   Le concept de projet RStudio
+
+    -   La gestion des chemins de fichiers
+
+    -   Importation de fichiers de données (CSV, Excel, SAS)
+
+    -   Vérifier l'Importation
+
+-   Les packages R
+
+    -   Installation de nouveaux packages
+
+    -   Utilisations et recommandations
+
+    -   Les packages populaires
+
+-   Exploration de données avec R
+
+    -   Les solutions *simples* d'exploration de données
+
+    -   Les solutions graphiques pour l'exploration des données
+
+-   Découverte du package 'dplyr'
+
+    -   travailler avec des 'data.frame' en 'base R'
+
+    -   travailler avec des 'data.frame' avec 'dplyr'
+
+-   Création de fonctions
+
+    -   S'organiser avec les fonctions
+
+    -   Les bases du développement de fonctions
+
+-   Format tidy
+
+-   Les outils du tidyverse
+
+    -   Présentation des packages
+
+    -   Enchaînements des opérations (piping)
+
+-   Recodages des variables
+
+-   Filtrages des données
+
+-   Sélections des colonnes
+
+-   Tris des tableaux
+
+-   Transformations et créations de colonnes
+
+    -   Opérations usuelles
+
+    -   Gestion des String et des dates
+
+-   Agrégations
+
+-   Représenter des données sous forme de graphiques avec 'ggplot2'
+
+-   Créer des visualisations de données soignés et annotées
+
+-   Utiliser les extensions populaires
+
+-   Exporter les graphiques
+
+-   Paradigmes de ggplot2
+
+-   La galaxie des types de graphiques
+
+    -   Les types usuels
+
+    -   Les fonctions statistiques
+
+-   Maîtrise des axes et des légendes
+
+-   Ventilation des graphiques par axes
+
+-   Les thèmes et La personnalisation des graphiques
+
+-   Les outils à maîtriser
+
+    -   Combinaisons de graphiques
+
+    -   Optimisations du placement des textes
+
+-   Les extensions
+
+## Prérequis
+
+*Il n'est pas demandé de connaître R pour suivre cette formation.*
+
+-   avoir déjà pratiqué un langage de programmation (SAS, Visual Basic, python, R, sh, etc.) ou avoir envie d'en pratiquer un
+
+-   avoir des notions d'analyse de données (moyenne, somme, comptage)
+
+## Modalités
+
+### Modalités pédagogiques
+
+Notre formation s'articule sur une alternance d'apports théoriques et de pratiques :
+
+-   Exposés théoriques réalisés par le formateur
+
+-   Apport d'expériences de le formateur
+
+-   Echanges et retours d'expérience entre les participants.
+
+-   Exercices et ateliers d'application permettant aux stagiaires de pratiquer concrêtement.
+
+### Modalités d'évaluation finale
+
+-   Évaluation sous forme d'autoevaluation
+
+-   Questionnaire d'évaluation
+
+-   Test de positionnement en début et fin de la formation pour valider les compétences acquises
+
+### Documentation remise aux stagiaires
+
+-   Les supports de cours au format PDF
+
+-   Ces mêmes supports contiennent les codes R et les graphiques, et quelques exercices
+
+### Outils utilisés lors de la formation
+
+-   R et Rstudio
+
+-   Navigateur moderne (Chrome, FireFox, Edge, Safari)
 

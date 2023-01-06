@@ -1,0 +1,30 @@
+---
+title: ""
+image: img/profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/oousmane_11
+    - icon: github
+      text: Github
+      href: https://github.com/oousmane
+    - icon: facebook
+      text: Facebook
+      href: https://www.facebook.com/oousmane.aly/
+    - icon: globe
+      text: Site Web
+      href: https://oousmane.github.io/
+---
+
+**Ousmane Ouedraogo**, Météorologiste.
+
+------------------------------------------------------------------------
+
+Salut 👋 je suis météo 🌦️ et je travaille à l' **Agence Nationale de la Météorologie** à **Ouagadougou, Burkina Faso**.
+Je suis particulièrement passionné d'analyse et visualisation de données, de climat et de machine learning.
+Aussi j'adore apprendre et partager de nouvelle choses au quotidien.
+
+Par mes temps libres j'anime des formations sur la programmation avec R d'une part et de l'autre j'offre des services de freelance en analyse et visualisation de données.
+
